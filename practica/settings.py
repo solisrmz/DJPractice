@@ -26,7 +26,11 @@ SECRET_KEY = '^x5s2luak-+oy0^+u^y$f8p1hiz*^c$u0uy0@8)9ga1h0khym#'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'developsrmz@gmail.com'
+EMAIL_HOST_PASSWORD = 'solis232r'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 # Application definition
 
