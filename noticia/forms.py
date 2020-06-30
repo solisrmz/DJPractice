@@ -21,6 +21,7 @@ class FormRegModelForm(forms.ModelForm):
 
 
 #Datos que se van a necesitar en dicho formulario
-class FormReg(forms.Form):
+class ContactForm(forms.Form):
     name = forms.CharField(max_length=100)
     email = forms.EmailField()
+    message = forms.CharField(widget=forms.Textarea)

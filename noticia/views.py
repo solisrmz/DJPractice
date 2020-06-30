@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import FormReg, FormRegModelForm
+from .forms import ContactForm, FormRegModelForm
 from .models import Usuario
 # Create your views here.
 def inicio(request):
@@ -21,3 +21,15 @@ def inicio(request):
     }
     #Retorna un request, una vista y un contexto
     return render(request, "Inicio.html", context)
+
+def contact(request):
+    titulo = "Contáctate con nosotros"
+    form = ContactForm(request.POST or None)
+    if form.is_valid():
+        for key, value in form.cleaned_data.items():
+            print(key, value)
+    context = {
+        'titulo':titulo,
+        'form':form
+    }
+    return render(request, "contacto.html", context)    
