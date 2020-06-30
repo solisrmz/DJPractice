@@ -10,8 +10,8 @@ class FormRegModelForm(forms.ModelForm):
     def clean_email(self):
         email = self.cleaned_data.get("email")
         #Para validar estructura del email
-        email_base, proveeder = email.split("@")
-        dominio, extension = proveeder.split(".")
+        email_base, provider = email.split("@")
+        dominio, extension = provider.split(".")
         if not extension == "com":
             raise forms.ValidationError("Por favor ingresa una extension .com en tu email")
         return email
