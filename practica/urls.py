@@ -18,11 +18,13 @@ from django.urls import path
 from noticia import views
 from django.conf import settings
 from django.conf.urls.static import static
+from .views import about
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.inicio, name='inicio'),
-    path('contacto', views.contact, name='contacto'),
+    path('contact', views.contact, name='contact'),
+    path('about', about, name='about'),
 ]
 
 #Para hacer la carga dependiendo si está en prod o desarrollo
