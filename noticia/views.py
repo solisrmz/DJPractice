@@ -22,7 +22,7 @@ def inicio(request):
         'my_form':form,
     }
     #Retorna un request, una vista y el contexto
-    return render(request, "Inicio.html", context)
+    return render(request, "base.html", context)
 
 #Vista para el formulario de contacto
 def contact(request):
