@@ -26,7 +26,7 @@ def inicio(request):
 
 #Vista para el formulario de contacto
 def contact(request):
-    titulo = "Contáctate con nosotros"
+    titulo = "Formulario de contacto"
     #se carga el form
     form = ContactForm(request.POST or None)
     #validación del formulario
