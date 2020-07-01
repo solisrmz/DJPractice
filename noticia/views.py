@@ -21,8 +21,15 @@ def inicio(request):
         'saludo':titulo,
         'my_form':form,
     }
+    #comprueba el rol del usuario, en este caso si es super usuario le va a permitir una acción
+    if request.user.is_authenticated and request.user.is_staff:
+        query = Usuario.objects.all().order_by('nombre')
+        context={
+        'pageTitle':titulo,
+        'data':query,
+        }
     #Retorna un request, una vista y el contexto
-    return render(request, "Inicio.html", context)
+    return render(request, "Index.html", context)
 
 #Vista para el formulario de contacto
 def contact(request):

@@ -1,3 +1,10 @@
 .texto-alineado{
     text-align: center;
 }
+
+.bg-nav{
+    background-color: rgb(51, 67, 139);
+}
+.jumbo-fondo{
+    background-color:  rgb(255, 255, 255)!important;
+}
