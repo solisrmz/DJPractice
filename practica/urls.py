@@ -25,5 +25,6 @@ urlpatterns = [
     path('contacto', views.contact, name='contacto'),
 ]
 
+#Para hacer la carga dependiendo si está en prod o desarrollo
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -41,7 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #mis apps
     'noticia',
+    #apps terceros
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -53,7 +56,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 ROOT_URLCONF = 'practica.urls'
 
 TEMPLATES = [
@@ -121,7 +124,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
